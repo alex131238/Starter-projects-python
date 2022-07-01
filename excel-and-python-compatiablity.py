@@ -10,36 +10,37 @@ data = {
         "sponsorship": 50
     },
     "Tanya": {
-        "Nya": 80,
-        "Horny": 10000,
-        'gaming': 30,
-        'gayming': 99,
-        'headpats': 100
+        "Bingus": 99,
+        "Bongus": 89,
+        "metagaming": 30,
+        "sponsorship": 200
     },
     "Hot Floppa": {
-        'Spicyness': 80,
-        'loyalty': 99,
-        'free realestate': 100
+        "Bingus": 100,
+        "Bongus": 99,
+        "metagaming": 0,
+        "sponsorship": 50
     },
     'Sogga': {
-        'henlo': 80,
-        'best boy': 50,
-        'in love with floppa': 100,
-        "loves you": 90
+        "Bingus": 100,
+        "Bongus": 99,
+        "metagaming": 0,
+        "sponsorship": 50
     },
 }
 
 
+wb = Workbook()
+ws = wb.active
+ws.title = "People and Pokemon"
 
+headings = ['Name'] + list(data['Alex'].keys())
+ws.append(headings)
 
-
-
-
-
-
-
-wb = Workbook
-dest_filename = "Created-Spreadsheet.xlsx"
+for person in data:
+    grades = list(data[person].values())
+    ws.append([person]+ grades)
+wb.save("People and Pokemon bingus.xlsx")
 
 # ws = wb.active
 
@@ -57,4 +58,4 @@ dest_filename = "Created-Spreadsheet.xlsx"
 
 
 
-wb.save('')
+
